@@ -6,8 +6,8 @@ import {
 	PrimaryColumn,
 	UpdateDateColumn,
 } from "typeorm";
-import { UserProfileRole } from "../types/UserProfileRole";
 
+import { UserProfileRole } from "../types/UserProfileRole";
 
 @Entity({
 	name: "users",

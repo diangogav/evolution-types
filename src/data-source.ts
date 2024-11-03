@@ -1,10 +1,11 @@
 import { DataSource, DataSourceOptions } from "typeorm";
-import { UserProfileEntity } from "./entities/UserProfileEntity";
-import { MatchResumeEntity } from "./entities/MatchResumeEntity";
+
+import { config } from "./config";
 import { DuelResumeEntity } from "./entities/DuelResumeEntity";
+import { MatchResumeEntity } from "./entities/MatchResumeEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
 import { TournamentEntity } from "./entities/TournamentEntity";
-import { config } from "./config";
+import { UserProfileEntity } from "./entities/UserProfileEntity";
 
 const options: DataSourceOptions = {
 	type: "postgres",
