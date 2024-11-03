@@ -23,6 +23,6 @@ const options: DataSourceOptions = {
 		TournamentEntity,
 	],
 	subscribers: [],
-	migrations: ["src/shared/db/postgres/infrastructure/migrations/*.ts"],
+	migrations: ["src/migrations/*.ts"],
 };
 export const dataSource = new DataSource(options);
