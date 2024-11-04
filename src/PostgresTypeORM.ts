@@ -1,6 +1,7 @@
 import { DataSource } from "typeorm";
-import { Database } from "./Database";
+
 import { dataSource } from "./data-source";
+import { Database } from "./Database";
 
 export class PostgresTypeORM implements Database {
 	private readonly dataSource: DataSource;
