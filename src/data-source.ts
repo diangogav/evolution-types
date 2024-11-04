@@ -1,3 +1,4 @@
+import { join } from "path";
 import { DataSource, DataSourceOptions } from "typeorm";
 
 import { config } from "./config";
@@ -24,6 +25,6 @@ const options: DataSourceOptions = {
 		TournamentEntity,
 	],
 	subscribers: [],
-	migrations: ["src/migrations/*.ts"],
+	migrations: [join(__dirname, "/migrations/*.ts")],
 };
 export const dataSource = new DataSource(options);
