@@ -9,11 +9,14 @@ export class UserAchievementEntity {
     userId: string;
 
     @Column({ name: "achievement_id" })
-    achievementId: string;
+    achievementId: number;
 
     @Column({ name: "labels", type: "simple-array" })
     labels: string[];
 
     @Column({ name: "unlocked_at" })
     unlockedAt: Date;
+
+    @Column()
+    season: number;
 }
