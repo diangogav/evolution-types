@@ -7,6 +7,7 @@ import { MatchResumeEntity } from "./entities/MatchResumeEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
 import { TournamentEntity } from "./entities/TournamentEntity";
 import { UserProfileEntity } from "./entities/UserProfileEntity";
+import { AchievementEntity } from "./entities/AchievementEntity";
 
 const options: DataSourceOptions = {
 	type: "postgres",
@@ -23,6 +24,7 @@ const options: DataSourceOptions = {
 		DuelResumeEntity,
 		PlayerStatsEntity,
 		TournamentEntity,
+		AchievementEntity
 	],
 	subscribers: [],
 	migrations: [join(__dirname, "/migrations/*.ts")],
