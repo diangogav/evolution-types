@@ -20,4 +20,7 @@ export class PlayerStatsEntity {
 
 	@Column({ name: "user_id" })
 	userId: string;
+
+	@Column()
+	season: number;
 }
