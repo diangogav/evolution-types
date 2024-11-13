@@ -11,7 +11,7 @@ export class UserAchievementEntity {
     @Column({ name: "achievement_id" })
     achievementId: number;
 
-    @Column({ name: "labels", type: "simple-array" })
+    @Column({ name: "labels", type: "json" })
     labels: string[];
 
     @Column({ name: "unlocked_at" })
