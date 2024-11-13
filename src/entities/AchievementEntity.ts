@@ -1,34 +1,35 @@
 import {
-    Column,
-    CreateDateColumn,
-    DeleteDateColumn,
-    Entity, PrimaryColumn,
-    UpdateDateColumn
+	Column,
+	CreateDateColumn,
+	DeleteDateColumn,
+	Entity,
+	PrimaryColumn,
+	UpdateDateColumn,
 } from "typeorm";
 
 @Entity("achievements")
 export class AchievementEntity {
-    @PrimaryColumn()
-    id: number;
+	@PrimaryColumn()
+	id: number;
 
-    @Column()
-    name: string;
+	@Column()
+	name: string;
 
-    @Column()
-    description: string;
+	@Column()
+	description: string;
 
-    @Column()
-    icon: string;
+	@Column()
+	icon: string;
 
-    @Column({ name: "earned_points" })
-    earnedPoints: number;
+	@Column({ name: "earned_points" })
+	earnedPoints: number;
 
-    @CreateDateColumn({ name: "created_at" })
-    createdAt: Date;
+	@CreateDateColumn({ name: "created_at" })
+	createdAt: Date;
 
-    @UpdateDateColumn({ name: "updated_at" })
-    updatedAt: Date;
+	@UpdateDateColumn({ name: "updated_at" })
+	updatedAt: Date;
 
-    @DeleteDateColumn({ name: "deleted_at", nullable: true })
-    deletedAt: Date | null;
+	@DeleteDateColumn({ name: "deleted_at", nullable: true })
+	deletedAt: Date | null;
 }
