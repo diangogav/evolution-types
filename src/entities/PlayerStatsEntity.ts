@@ -1,7 +1,7 @@
 import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("player_stats")
-@Index(["userId", "banListName"], { unique: true })
+@Index(["userId", "banListName", "season"], { unique: true })
 export class PlayerStatsEntity {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
