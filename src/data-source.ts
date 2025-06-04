@@ -9,6 +9,8 @@ import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
 import { TournamentEntity } from "./entities/TournamentEntity";
 import { UserAchievementEntity } from "./entities/UserAchievementEntity";
 import { UserProfileEntity } from "./entities/UserProfileEntity";
+import { LightningTournamentEntity } from "./entities/LightningTournamentEntity";
+import { LightningResultEntity } from "./entities/LightningResultEntity";
 
 const options: DataSourceOptions = {
 	type: "postgres",
@@ -27,6 +29,7 @@ const options: DataSourceOptions = {
 		TournamentEntity,
 		AchievementEntity,
 		UserAchievementEntity,
+		LightningTournamentEntity,
 	],
 	subscribers: [],
 	migrations: [join(__dirname, "/migrations/*.ts")],

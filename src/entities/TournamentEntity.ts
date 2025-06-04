@@ -18,7 +18,7 @@ export class TournamentEntity {
 	@Column()
 	mode: number;
 
-	@Column()
+	@Column({ name: "user_id" })
 	userId: string;
 
 	@Column()
