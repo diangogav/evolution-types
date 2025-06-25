@@ -44,7 +44,7 @@ export class DuelResumeEntity {
 	@Column()
 	season: number;
 
-	@Column({ name: "ip_address", nullable: true, default: null })
+	@Column({ name: "ip_address", type: "varchar", nullable: true, default: null })
 	ipAddress: string | null;
 
 	@CreateDateColumn({ name: "created_at" })
