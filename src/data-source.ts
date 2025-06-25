@@ -4,13 +4,12 @@ import { DataSource, DataSourceOptions } from "typeorm";
 import { config } from "./config";
 import { AchievementEntity } from "./entities/AchievementEntity";
 import { DuelResumeEntity } from "./entities/DuelResumeEntity";
+import { LightningTournamentEntity } from "./entities/LightningTournamentEntity";
 import { MatchResumeEntity } from "./entities/MatchResumeEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
 import { TournamentEntity } from "./entities/TournamentEntity";
 import { UserAchievementEntity } from "./entities/UserAchievementEntity";
 import { UserProfileEntity } from "./entities/UserProfileEntity";
-import { LightningTournamentEntity } from "./entities/LightningTournamentEntity";
-import { LightningResultEntity } from "./entities/LightningResultEntity";
 
 const options: DataSourceOptions = {
 	type: "postgres",
