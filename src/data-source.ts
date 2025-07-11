@@ -9,8 +9,8 @@ import { MatchResumeEntity } from "./entities/MatchResumeEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
 import { TournamentEntity } from "./entities/TournamentEntity";
 import { UserAchievementEntity } from "./entities/UserAchievementEntity";
-import { UserProfileEntity } from "./entities/UserProfileEntity";
 import { UserBanEntity } from "./entities/UserBanEntity";
+import { UserProfileEntity } from "./entities/UserProfileEntity";
 
 const options: DataSourceOptions = {
 	type: "postgres",

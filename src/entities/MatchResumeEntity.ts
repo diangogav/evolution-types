@@ -3,11 +3,12 @@ import {
 	CreateDateColumn,
 	DeleteDateColumn,
 	Entity,
+	JoinColumn,
+	ManyToOne,
 	PrimaryColumn,
 	UpdateDateColumn,
-	ManyToOne,
-	JoinColumn,
 } from "typeorm";
+
 import { UserProfileEntity } from "./UserProfileEntity";
 
 @Entity({
@@ -69,7 +70,7 @@ export class MatchResumeEntity {
 	@JoinColumn({ name: "anulled_user_id" })
 	anulledUser: UserProfileEntity | null;
 
-	@Column({ name: "anulled_reason", nullable: true })
+	@Column({ name: "anulled_reason", nullable: true, type: "character varying" })
 	anulledReason: string | null;
 
 	@Column({ name: "anulled_by", nullable: true })
