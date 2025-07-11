@@ -5,7 +5,10 @@ import {
 	Entity,
 	PrimaryColumn,
 	UpdateDateColumn,
+	ManyToOne,
+	JoinColumn,
 } from "typeorm";
+import { UserProfileEntity } from "./UserProfileEntity";
 
 @Entity({
 	name: "matches",
@@ -49,6 +52,32 @@ export class MatchResumeEntity {
 
 	@Column()
 	points: number;
+
+	@Column({ name: "player_ids", type: "simple-array", nullable: true })
+	playerIds: string[] | null;
+
+	@Column({ name: "opponent_ids", type: "simple-array", nullable: true })
+	opponentIds: string[] | null;
+
+	@Column({ default: false })
+	anulled: boolean;
+
+	@Column({ name: "anulled_user_id", nullable: true })
+	anulledUserId: string | null;
+
+	@ManyToOne(() => UserProfileEntity, { nullable: true })
+	@JoinColumn({ name: "anulled_user_id" })
+	anulledUser: UserProfileEntity | null;
+
+	@Column({ name: "anulled_reason", nullable: true })
+	anulledReason: string | null;
+
+	@Column({ name: "anulled_by", nullable: true })
+	anulledBy: string | null;
+
+	@ManyToOne(() => UserProfileEntity, { nullable: true })
+	@JoinColumn({ name: "anulled_by" })
+	anulledByUser: UserProfileEntity | null;
 
 	@CreateDateColumn({ name: "created_at" })
 	createdAt: Date;
