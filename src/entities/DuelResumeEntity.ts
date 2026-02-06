@@ -17,6 +17,9 @@ export class DuelResumeEntity {
 	@Column({ name: "user_id" })
 	userId: string;
 
+	@Column({ name: "game_id" })
+	gameId: string;
+
 	@Column({ name: "player_names", type: "simple-array" })
 	playerNames: string[];
 

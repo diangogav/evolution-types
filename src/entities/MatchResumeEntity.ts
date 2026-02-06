@@ -21,6 +21,9 @@ export class MatchResumeEntity {
 	@Column({ name: "user_id" })
 	userId: string;
 
+	@Column({ name: "game_id" })
+	gameId: string;
+
 	@Column({ name: "best_of" })
 	bestOf: number;
 
