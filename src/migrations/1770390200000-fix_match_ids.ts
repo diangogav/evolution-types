@@ -94,7 +94,7 @@ export class FixMatchIds1770390200000 implements MigrationInterface {
 
     }
 
-    public async down(_queryRunner: QueryRunner): Promise<void> {
+    public async down(): Promise<void> {
         // It's hard to reverse data recovery without a backup.
         // We could technically set them back to null where they match specific criteria, but usually data fixes don't have simple downs.
         console.log("Down migration for data fix not implemented (destructive operation).");
