@@ -12,6 +12,8 @@ import { TournamentEntity } from "./entities/TournamentEntity";
 import { UserAchievementEntity } from "./entities/UserAchievementEntity";
 import { UserBanEntity } from "./entities/UserBanEntity";
 import { UserProfileEntity } from "./entities/UserProfileEntity";
+import { UnrankedMatchEntity } from "./entities/UnrankedMatchEntity";
+import { UnrankedDuelEntity } from "./entities/UnrankedDuelEntity";
 
 const options: DataSourceOptions = {
 	type: "postgres",
@@ -33,6 +35,8 @@ const options: DataSourceOptions = {
 		LightningTournamentEntity,
 		UserBanEntity,
 		LightningRankingEntity,
+		UnrankedMatchEntity,
+		UnrankedDuelEntity,
 	],
 	subscribers: [],
 	migrations: [join(__dirname, "/migrations/*.ts")],
