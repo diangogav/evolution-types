@@ -22,6 +22,9 @@ export class UserProfileEntity {
 	@Column()
 	password: string;
 
+	@Column({ name: "secure_password", nullable: true })
+	securePassword: string | null;
+
 	@Column({ unique: true })
 	email: string;
 
