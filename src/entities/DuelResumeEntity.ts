@@ -44,6 +44,15 @@ export class DuelResumeEntity {
 	@Column({ name: "match_id" })
 	matchId: string;
 
+	/**
+	 * Domain identity of the single game this row belongs to. duels rows are
+	 * one per player per game, so the same duel_id appears on every player's
+	 * row of that game — it is the cross-player correlation key, never unique.
+	 * Null on rows persisted before the column existed (no reliable backfill).
+	 */
+	@Column({ name: "duel_id", type: "uuid", nullable: true })
+	duelId: string | null;
+
 	@Column()
 	season: number;
 
