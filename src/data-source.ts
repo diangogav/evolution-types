@@ -7,7 +7,9 @@ import { DuelResumeEntity } from "./entities/DuelResumeEntity";
 import { LightningRankingEntity } from "./entities/LightningRankingEntity";
 import { LightningTournamentEntity } from "./entities/LightningTournamentEntity";
 import { MatchResumeEntity } from "./entities/MatchResumeEntity";
+import { PlayerRatingEntity } from "./entities/PlayerRatingEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
+import { RatingHistoryEntity } from "./entities/RatingHistoryEntity";
 import { TournamentEntity } from "./entities/TournamentEntity";
 import { UserAchievementEntity } from "./entities/UserAchievementEntity";
 import { UserBanEntity } from "./entities/UserBanEntity";
@@ -37,6 +39,8 @@ const options: DataSourceOptions = {
 		LightningRankingEntity,
 		UnrankedMatchEntity,
 		UnrankedDuelEntity,
+		PlayerRatingEntity,
+		RatingHistoryEntity,
 	],
 	subscribers: [],
 	migrations: [join(__dirname, "/migrations/*.ts")],
