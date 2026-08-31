@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity("player_ratings")
-@Index(["userId", "banListName", "season"], { unique: true })
+@Index(["userId", "rankId", "season"], { unique: true })
 export class PlayerRatingEntity {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
@@ -9,8 +9,8 @@ export class PlayerRatingEntity {
 	@Column({ name: "user_id" })
 	userId: string;
 
-	@Column({ name: "ban_list_name" })
-	banListName: string;
+	@Column({ name: "rank_id" })
+	rankId: string;
 
 	@Column()
 	season: number;

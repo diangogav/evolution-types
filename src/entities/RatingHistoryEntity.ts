@@ -2,7 +2,7 @@ import { Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn } from 
 
 @Entity("rating_history")
 @Index(["matchId", "userId", "kind"], { unique: true })
-@Index(["userId", "banListName", "season"])
+@Index(["userId", "rankId", "season"])
 export class RatingHistoryEntity {
 	@PrimaryGeneratedColumn("uuid")
 	id: string;
@@ -13,8 +13,8 @@ export class RatingHistoryEntity {
 	@Column({ name: "user_id" })
 	userId: string;
 
-	@Column({ name: "ban_list_name" })
-	banListName: string;
+	@Column({ name: "rank_id" })
+	rankId: string;
 
 	@Column()
 	season: number;
