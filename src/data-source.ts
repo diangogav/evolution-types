@@ -10,6 +10,8 @@ import { MatchResumeEntity } from "./entities/MatchResumeEntity";
 import { PlayerRatingEntity } from "./entities/PlayerRatingEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
 import { RatingHistoryEntity } from "./entities/RatingHistoryEntity";
+import { RankEntity } from "./entities/RankEntity";
+import { RankMemberEntity } from "./entities/RankMemberEntity";
 import { TournamentEntity } from "./entities/TournamentEntity";
 import { UserAchievementEntity } from "./entities/UserAchievementEntity";
 import { UserBanEntity } from "./entities/UserBanEntity";
@@ -41,6 +43,8 @@ const options: DataSourceOptions = {
 		UnrankedDuelEntity,
 		PlayerRatingEntity,
 		RatingHistoryEntity,
+		RankEntity,
+		RankMemberEntity,
 	],
 	subscribers: [],
 	migrations: [join(__dirname, "/migrations/*.ts")],
