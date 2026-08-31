@@ -14,7 +14,7 @@ CREATE TEMP TABLE rank_merges (source_name text NOT NULL, target_name text NOT N
 
 INSERT INTO rank_merges (source_name, target_name) VALUES
 	('2011.09 Tengu Plant', '2011.09 Tengu'),
-	('JTP', 'JTP (Original)');
+	('JTP (Original)', 'JTP');
 
 DO $$
 DECLARE
