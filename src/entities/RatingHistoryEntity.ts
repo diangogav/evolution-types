@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("rating_history")
-@Index(["matchId", "userId", "kind"], { unique: true })
+@Index(["matchId", "userId", "kind", "rankId"], { unique: true })
 @Index(["userId", "rankId", "season"])
 export class RatingHistoryEntity {
 	@PrimaryGeneratedColumn("uuid")
