@@ -2,6 +2,7 @@ import { Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn } from 
 
 @Entity("rating_history")
 @Index(["matchId", "userId", "kind", "rankId"], { unique: true })
+@Index(["matchId", "userId", "rankId", "kind", "cycle"], { unique: true })
 @Index(["userId", "rankId", "season"])
 export class RatingHistoryEntity {
 	@PrimaryGeneratedColumn("uuid")
@@ -21,6 +22,9 @@ export class RatingHistoryEntity {
 
 	@Column({ type: "varchar" })
 	kind: "applied" | "reversal";
+
+	@Column({ type: "smallint", default: 0 })
+	cycle: number;
 
 	@Column({ name: "previous_rating" })
 	previousRating: number;
