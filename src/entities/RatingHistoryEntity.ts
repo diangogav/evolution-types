@@ -1,7 +1,6 @@
 import { Column, CreateDateColumn, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("rating_history")
-@Index(["matchId", "userId", "kind", "rankId"], { unique: true })
 @Index(["matchId", "userId", "rankId", "kind", "cycle"], { unique: true })
 @Index(["userId", "rankId", "season"])
 export class RatingHistoryEntity {
@@ -21,7 +20,7 @@ export class RatingHistoryEntity {
 	season: number;
 
 	@Column({ type: "varchar" })
-	kind: "applied" | "reversal";
+	kind: "applied" | "reversal" | "reinstatement";
 
 	@Column({ type: "smallint", default: 0 })
 	cycle: number;
