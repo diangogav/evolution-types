@@ -36,9 +36,6 @@ export class AddAchievementCodeAndCatalog1788900000000 implements MigrationInter
 		await queryRunner.query(
 			`CREATE UNIQUE INDEX IF NOT EXISTS "IDX_achievements_code" ON "achievements" ("code")`,
 		);
-		await queryRunner.query(
-			`CREATE UNIQUE INDEX IF NOT EXISTS "IDX_user_achievements_user_achievement_season" ON "user_achievements" ("user_id", "achievement_id", "season")`,
-		);
 		for (const row of CATALOG) {
 			await queryRunner.query(
 				`INSERT INTO "achievements" ("id", "code", "name", "description", "icon", "earned_points") VALUES ($1, $2, $3, $4, $5, 0) ON CONFLICT ("id") DO NOTHING`,
@@ -51,7 +48,6 @@ export class AddAchievementCodeAndCatalog1788900000000 implements MigrationInter
 		const ids = CATALOG.map((row) => row.id);
 		await queryRunner.query(`DELETE FROM "user_achievements" WHERE "achievement_id" = ANY($1)`, [ids]);
 		await queryRunner.query(`DELETE FROM "achievements" WHERE "id" = ANY($1)`, [ids]);
-		await queryRunner.query(`DROP INDEX IF EXISTS "IDX_user_achievements_user_achievement_season"`);
 		await queryRunner.query(`DROP INDEX IF EXISTS "IDX_achievements_code"`);
 		await queryRunner.query(`ALTER TABLE "achievements" DROP COLUMN IF EXISTS "code"`);
 	}
