@@ -21,6 +21,9 @@ export class AchievementEntity {
 	@Column()
 	icon: string;
 
+	@Column({ type: "varchar", length: 64, nullable: true, unique: true })
+	code: string | null;
+
 	@Column({ name: "earned_points" })
 	earnedPoints: number;
 
