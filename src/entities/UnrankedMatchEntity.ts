@@ -25,6 +25,12 @@ export class UnrankedMatchEntity {
     @Column({ name: "opponent_names", type: "simple-array" })
     opponentNames: string[];
 
+    @Column({ name: "player_ids", type: "simple-array", nullable: true })
+    playerIds: string[] | null;
+
+    @Column({ name: "opponent_ids", type: "simple-array", nullable: true })
+    opponentIds: string[] | null;
+
     @Column()
     date: Date;
 
