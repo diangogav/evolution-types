@@ -27,6 +27,9 @@ export class AchievementEntity {
 	@Column({ name: "earned_points" })
 	earnedPoints: number;
 
+	@Column({ name: "essence_reward", default: 50 })
+	essenceReward: number;
+
 	@CreateDateColumn({ name: "created_at" })
 	createdAt: Date;
 
