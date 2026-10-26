@@ -63,6 +63,10 @@ export class MatchResumeEntity {
 	@Column({ name: "opponent_ids", type: "simple-array", nullable: true })
 	opponentIds: string[] | null;
 
+	/** Client the player reported in the WS handshake (`?client=`); null when it sent none. */
+	@Column({ type: "character varying", length: 32, nullable: true })
+	client: string | null;
+
 	@Column({ default: false })
 	anulled: boolean;
 

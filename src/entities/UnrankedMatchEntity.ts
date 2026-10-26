@@ -31,6 +31,14 @@ export class UnrankedMatchEntity {
     @Column({ name: "opponent_ids", type: "simple-array", nullable: true })
     opponentIds: string[] | null;
 
+    /** Handshake client per player, aligned with `playerNames`; "" when the player sent none. */
+    @Column({ name: "player_clients", type: "simple-array", nullable: true })
+    playerClients: string[] | null;
+
+    /** Handshake client per player, aligned with `opponentNames`; "" when the player sent none. */
+    @Column({ name: "opponent_clients", type: "simple-array", nullable: true })
+    opponentClients: string[] | null;
+
     @Column()
     date: Date;
 
