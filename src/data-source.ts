@@ -4,8 +4,6 @@ import { DataSource, DataSourceOptions } from "typeorm";
 import { config } from "./config";
 import { AchievementEntity } from "./entities/AchievementEntity";
 import { DuelResumeEntity } from "./entities/DuelResumeEntity";
-import { LightningRankingEntity } from "./entities/LightningRankingEntity";
-import { LightningTournamentEntity } from "./entities/LightningTournamentEntity";
 import { MatchResumeEntity } from "./entities/MatchResumeEntity";
 import { PlayerRatingEntity } from "./entities/PlayerRatingEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
@@ -37,9 +35,7 @@ const options: DataSourceOptions = {
 		TournamentEntity,
 		AchievementEntity,
 		UserAchievementEntity,
-		LightningTournamentEntity,
 		UserBanEntity,
-		LightningRankingEntity,
 		UnrankedMatchEntity,
 		UnrankedDuelEntity,
 		PlayerRatingEntity,
