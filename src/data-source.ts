@@ -8,6 +8,7 @@ import { MatchResumeEntity } from "./entities/MatchResumeEntity";
 import { PlayerRatingEntity } from "./entities/PlayerRatingEntity";
 import { PlayerStatsEntity } from "./entities/PlayerStatsEntity";
 import { PointsLedgerEntity } from "./entities/PointsLedgerEntity";
+import { PushSubscriptionEntity } from "./entities/PushSubscriptionEntity";
 import { RatingHistoryEntity } from "./entities/RatingHistoryEntity";
 import { RankEntity } from "./entities/RankEntity";
 import { RankMemberEntity } from "./entities/RankMemberEntity";
@@ -36,6 +37,7 @@ const options: DataSourceOptions = {
 		AchievementEntity,
 		UserAchievementEntity,
 		UserBanEntity,
+		PushSubscriptionEntity,
 		UnrankedMatchEntity,
 		UnrankedDuelEntity,
 		PlayerRatingEntity,
