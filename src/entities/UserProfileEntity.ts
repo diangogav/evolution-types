@@ -3,6 +3,7 @@ import {
 	CreateDateColumn,
 	DeleteDateColumn,
 	Entity,
+	Index,
 	PrimaryColumn,
 	UpdateDateColumn,
 } from "typeorm";
@@ -28,6 +29,10 @@ export class UserProfileEntity {
 	@Column({ unique: true })
 	email: string;
 
+	/** When the address was proven to belong to the user; null while unproven. */
+	@Column({ name: "email_verified_at", type: "timestamptz", nullable: true })
+	emailVerifiedAt: Date | null;
+
 	@Column("simple-json", { nullable: true })
 	avatar: string | null;
 
@@ -38,8 +43,10 @@ export class UserProfileEntity {
 	})
 	role: UserProfileRole;
 
-	@Column({ name: "discord_id", nullable: true })
-	discordId: string;
+	/** Discord account linked to this user; one Discord account maps to one user. */
+	@Index("UQ_users_discord_id", { unique: true })
+	@Column({ name: "discord_id", type: "varchar", nullable: true })
+	discordId: string | null;
 
 	@Column({ name: "participant_id", nullable: true })
 	participantId: string;
