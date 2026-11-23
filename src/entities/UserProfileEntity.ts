@@ -48,6 +48,10 @@ export class UserProfileEntity {
 	@Column({ name: "discord_id", type: "varchar", nullable: true })
 	discordId: string | null;
 
+	/** Formats the player chose to play; null until they choose, an empty list is a choice. */
+	@Column({ type: "text", array: true, nullable: true })
+	formats: string[] | null;
+
 	@Column({ name: "participant_id", nullable: true })
 	participantId: string;
 
